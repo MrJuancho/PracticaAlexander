@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/MrJua/Desktop/PracticaAlexander/funciones.h
+assert.h
+-
+string.h
+-
+
+C:/Users/MrJua/Desktop/PracticaAlexander/main.c
+stdio.h
+-
+stdlib.h
+-
+funciones.h
+C:/Users/MrJua/Desktop/PracticaAlexander/funciones.h
+

@@ -1,0 +1,3 @@
+C:/Users/MrJua/Desktop/PracticaAlexander/cmake-build-debug/CMakeFiles/PracticaAlexander.dir
+C:/Users/MrJua/Desktop/PracticaAlexander/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/MrJua/Desktop/PracticaAlexander/cmake-build-debug/CMakeFiles/rebuild_cache.dir
