@@ -3,9 +3,8 @@
 #include "funciones.h"
 
 int main() {
-    FILE *Fin, *Fout;
-    Evento* lista = NULL, *lista_final = NULL;
-    int c;
+    FILE *Fout;
+    Evento* lista = NULL;
     int *numeros= NULL, i=1, index, e=0, apex = 0;
     char m,principal;
     char *nombre_out = "Salon.txt";
@@ -200,10 +199,10 @@ int main() {
                         scanf(" %c", &m_10);
                         switch (m_10) {
                             case '1':
-                                Mostrar_Datos(lista);
+                                Mostrar_Datos(lista_aux);
                                 break;
                             case '2':
-                                Mostrar_Datos_OVO(lista);
+                                Mostrar_Datos_OVO(lista_aux);
                                 break;
                             case '3':
                                 if((Fout = fopen(nombre_out,"wt")) == NULL){
@@ -213,7 +212,7 @@ int main() {
                                     Fout = fopen(nombre_out,"wt");
                                 }
                                 while(lista_aux != NULL){
-                                    fprintf(Fout,"%d >> %d/%d/%d >> %s\n",lista_aux->id, lista_aux -> dia, lista_aux -> mes, lista_aux -> yr, lista_aux->descripcion);
+                                    fprintf(Fout,"ID: %d >> Fecha: %d/%d/%d >> Descripcion: %s.\n",lista_aux->id, lista_aux->dia,lista_aux->mes,lista_aux->yr,lista_aux->descripcion);
                                     lista_aux = lista_aux->sig;
                                 }
                                 m_10='0';
@@ -248,8 +247,6 @@ int main() {
         }
     }while(principal!= '0');
 
-    fclose(Fin);
     fclose(Fout);
-    free(numeros);
     numeros = NULL;
 }
